@@ -1,0 +1,17 @@
+{% extends './Admin/admin.html.twig' %}
+{% block body %}
+
+    <h2>Editer projet</h2>
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col md-4">{{ form_row(form.name) }}</div>
+        <div class="col md-4">{{ form_row(form.url) }}</div>
+    </div>
+
+    <button class="btn btn-primary">Sauvgarder</button>
+    {{ form_end(form) }}
+{% endblock body %}
+{% block javascripts %}
+
+{% endblock %}

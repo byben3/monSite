@@ -1,0 +1,585 @@
+$break-small: 480px;
+$break-large: 1024px;
+$primeColor: #4ddbff;
+$backColorOpacityRegular: rgba(6,6,6,0.83);
+$backColorOpacityNull: rgba(6,6,6,0);
+$textPrimeColor: white;
+$borderPrimeColor: white;
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Righteous|Sniglet|Lato');
+
+html{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    background-image: url("../img/sky-night-star-atmosphere-dark-space-892781-pxhere.com.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+
+#navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $backColorOpacityRegular;
+    height: 120px;
+    margin-top: 40px;
+    @media screen and (max-width: $break-small) {
+        flex-direction: column;
+        height: 200px;
+        margin-top: 0px;
+    }
+
+    #logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-family: 'Pacifico', sans-serif;
+            font-size: 3em;
+            color: $primeColor;
+            margin: 0px;
+            @media screen and (max-width: $break-small) {
+                font-size: 2em;
+            }
+            @media screen and (max-width: $break-large) {
+                font-size: 2em;
+            }
+        }
+        p{
+            font-family: 'Sniglet', sans-serif;
+            color: $primeColor;
+            margin: 0px;
+            margin-top: -10px;
+            font-size: 1.5em;
+            @media screen and (max-width: $break-small) {
+                font-size: 1em;
+            }
+            @media screen and (max-width: $break-large) {
+                font-size: 1em;
+            }
+        }
+    }
+
+    button{
+        color: $textPrimeColor;
+        font-family: 'Sniglet',sans-serif;
+        background-color: $backColorOpacityNull;
+
+        border-top: 0px;
+        border-bottom: 0px;
+        border-left: 4px solid $borderPrimeColor;
+        border-right: 4px solid $borderPrimeColor;
+        border-radius: 0.3em ;
+        padding-left: 60px;
+        padding-right: 60px;
+        transform: skew(-20deg);
+        transition: 1s ease;
+        @media screen and (max-width: $break-large) {
+            border: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
+            transform: skew(0deg);
+        }
+        @media screen and (max-width: $break-small) {
+            border: 0px;
+            transform: skew(0deg);
+        }
+
+
+
+
+
+        &:hover{
+            color: $primeColor;
+            border-left: 4px solid $primeColor;
+            border-right: 4px solid $primeColor;
+            padding-left: 80px;
+            padding-right: 80px;
+            transition: 1s ease;
+            @media screen and (max-width: $break-small) {
+                padding-left: 10px;
+                padding-right: 10px;
+                transition: 0.1s ease;
+            }
+            @media screen and (max-width: $break-large) {
+                padding-left: 10px;
+                padding-right: 10px;
+                transition: 0.1s ease;
+            }
+        }
+
+        p{
+
+            font-size: 2em;
+            transform: skew(20deg);
+            @media screen and (max-width: $break-large) {
+                font-size: 2em;
+                transform: skew(0deg);
+
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: 1em;
+                transform: skew(0deg);
+
+            }
+
+        }
+    }
+}
+
+
+#portfolio{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #present{
+        color: $textPrimeColor;
+        font-family: Sniglet,sans-serif;
+        font-size: 2em;
+        text-align: center;
+        @media screen and (max-width: $break-small) {
+            font-size: 0.78em;
+        }
+    }
+
+    h2{
+        font-family: 'Righteous', sans-serif;
+        font-size: 4em;
+        text-transform: uppercase;
+        color: $primeColor;
+        text-align: center;
+        @media screen and (max-width: $break-small) {
+            font-size: 2em;
+        }
+
+
+    }
+
+    #buttonProject{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        button{
+
+            color: $textPrimeColor;
+            font-family: 'Sniglet',sans-serif;
+
+            background-color: $backColorOpacityRegular;
+
+            border: 2px solid $borderPrimeColor;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin: 10px;
+            transform: skew(-20deg);
+            clip-path: polygon(
+                            calc(0% + 5px) calc(0% + 5px), /* top left */
+                            calc(100% - 5px) calc(0% + 5px), /* top right */
+                            calc(100% - 5px) calc(100% - 5px), /* bottom right */
+                            calc(0% + 5px) calc(100% - 5px) /* bottom left */
+            );
+            transition: clip-path 0.4s linear;
+
+
+
+            &:hover{
+                color: $primeColor;
+                border: 2px solid $primeColor;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            p{
+
+                font-size: 2em;
+                transform: skew(20deg);
+                @media screen and (max-width: $break-small) {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    #iframeMain{
+        position: relative;
+        width: 80%;
+        margin-top: 50px;
+        z-index: 1;
+        @media screen and (max-width: $break-small) {
+            width: 90%;
+        }
+        &:hover{
+            #buttonIframe {
+                top: -30px;
+                -webkit-transition: top 0.5s linear;
+                -moz-transition: top 0.5s linear;
+                -ms-transition: top 0.5s linear;
+                -o-transition: top 0.5s linear;
+                transition: top 0.5s linear;
+                @media screen and (max-width: $break-large) {
+                    top: -18px;
+
+
+                }
+            }
+        }
+    }
+
+
+    #buttonIframe{
+        position: absolute;
+        display: flex;
+
+        left: 30%;
+        right: 30%;
+
+        z-index: -1;
+        top: 30px;
+        -webkit-transition: top 0.5s linear;
+        -moz-transition: top 0.5s linear;
+        -ms-transition: top 0.5s linear;
+        -o-transition: top 0.5s linear;
+        transition: top 0.5s linear;
+        @media screen and (max-width: $break-large) {
+            justify-content: center;
+            left: 0%;
+            right: 0%;
+            top: -18px;
+
+        }
+
+
+        input {
+            color: $textPrimeColor;
+            font-size: 1.5em;
+            font-family: 'Sniglet', sans-serif;
+            background-color: $backColorOpacityRegular;
+
+            border-top: 2px solid $primeColor;
+            border-left: 2px solid $primeColor;
+            border-right: 2px solid $primeColor;
+            border-bottom: 0px;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin: 0px;
+            @media screen and (max-width: $break-large) {
+                font-size: 1em;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: 0.83em;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &:hover {
+                color: $primeColor;
+
+            }
+        }
+
+        .closeIframe{
+            color: $textPrimeColor;
+            font-size: 1.5em;
+            font-family: 'Sniglet',sans-serif;
+            background-color: $backColorOpacityRegular;
+
+            border-top: 2px solid $primeColor;
+            border-left: 2px solid $primeColor;
+            border-right: 2px solid $primeColor;
+            border-bottom: 0px;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin: 0px;
+            @media screen and (max-width: $break-large) {
+                font-size: 1em;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            @media screen and (max-width: $break-small) {
+                font-size: 0.8em;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            &:hover {
+                color: #ff353b;
+            }
+        }
+
+
+    }
+
+
+    #iframeView{
+        padding: 10px;
+
+        border-radius: 2em;
+        border-right: 0px;
+        border-left: 0px;
+        border-top: 5px solid $borderPrimeColor;
+        border-bottom: 5px solid $borderPrimeColor;
+        transition-property: border-top, border-bottom;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        &:hover{
+            border-top: 5px solid $primeColor;
+            border-bottom: 5px solid $primeColor;
+            transition-property: border-top, border-bottom;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+
+        }
+    }
+
+    .iframeTriesToLoad {
+        background: url("../img/loader3.svg") center center no-repeat;
+        background-color: white;
+        z-index: -1;
+        iframe{
+            width: 100%;
+            height: 10vh;
+            border: 0px;
+
+
+
+        }
+    }
+    .iframeHasToLoad{
+        background-color: white;
+        iframe{
+            width: 100%;
+            height: 67vh;
+            border: 0px;
+            -webkit-transition: height 2s ease;
+            -moz-transition: height 2s ease;
+            -ms-transition: height 2s ease;
+            -o-transition: height 2s ease;
+            transition: height 2s ease;
+
+
+        }
+    }
+
+
+}
+
+#contactMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+
+    h2{
+        font-family: 'Righteous', sans-serif;
+        font-size: 4em;
+        text-transform: uppercase;
+        color: $primeColor;
+        @media screen and (max-width: $break-small) {
+            font-size: 2em;
+        }
+
+
+    }
+    #contactBody{
+        position: absolute;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+        top: 650px;
+        @media screen and (max-width: $break-large) {
+            flex-direction: column;
+            padding-top: 0px;
+
+            width: 100%;
+
+        }
+
+    }
+
+    #picture{
+        position: absolute;
+        right: 60%;
+        border: 2px solid black;
+        border-radius: 1em;
+        height: 320px;
+        width: 420px;
+        background-color: $backColorOpacityRegular;
+        @media screen and (max-width: $break-large) {
+            display: none;
+        }
+        #layerPicture{
+            position: absolute;
+            background-color: white;
+            height: 300px;
+            width: 400px;
+            padding: 10px;
+            z-index: 50;
+            opacity: 0;
+        }
+      img{
+        padding: 10px;
+        height: 300px;
+        width: 400px;
+          border-radius: 1em;
+      }
+    }
+
+    #bio{
+        position: absolute;
+        left: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $textPrimeColor;
+        background-color: $backColorOpacityRegular;
+        padding: 10px;
+        margin-top: 0px;
+        margin-bottom: 70px;
+        border: 2px solid black;
+        border-radius: 1em;
+        @media screen and (max-width: $break-large) {
+            left: 0%;
+            margin-top: 350px;
+            padding: 0px;
+        }
+
+        h3{
+            font-family: 'Righteous', sans-serif;
+            text-transform: uppercase;
+            color: $primeColor;
+            font-size: 2em;
+            margin: 0px;
+            @media screen and (max-width: $break-small) {
+                font-size: 1.5em;
+            }
+        }
+
+        p{
+            font-family: 'Righteous', sans-serif;
+            text-align: center;
+            font-size: 1.1em;
+            @media screen and (max-width: $break-small) {
+                font-size: 0.8em;
+            }
+        }
+        #mailto{
+
+
+            a{
+                color: $primeColor;
+            }
+        }
+        #cvGenerate{
+            p{
+                font-size: 0.8em;
+                margin-bottom: 0px;
+            }
+        }
+
+        input {
+            color: $textPrimeColor;
+            font-size: 1.5em;
+            font-family: 'Sniglet', sans-serif;
+            background-color: $backColorOpacityRegular;
+
+            border: 2px solid $primeColor;
+
+            padding-left: 60px;
+            padding-right: 60px;
+            margin: 0px;
+
+            &:hover{
+                color: $primeColor;
+
+            }
+        }
+
+        h4{
+            font-family: 'Righteous', sans-serif;
+            text-transform: uppercase;
+            color: $primeColor;
+            font-size: 1em;
+            border-top: 2px solid $primeColor;
+            padding-top: 40px;
+            margin-top: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+        }
+
+        #technology{
+            display: flex;
+            flex-direction: row;
+            font-size: 3em;
+            @media screen and (max-width: $break-small) {
+                flex-direction: column;
+
+            }
+
+
+
+
+            .fab {
+                padding: 10px;
+
+            }
+            .fa-html5{
+                color: #e54d26;
+            }
+            .fa-css3-alt{
+                color: #254bdd;
+            }
+            .fa-js{
+                color: #efd81d;
+            }
+            .fa-sass{
+                color: #c96195;
+            }
+            .fa-php{
+                color: #7377ad;
+            }
+            .fa-react{
+                color: #5ed3f3;
+            }
+            .symfonyIcon{
+                display: block;
+                height: 68px;
+                width: 68px;
+                padding-top: 10px;
+
+            }
+            .mySqlIcon{
+                display: block;
+                height: 48px;
+                width: 48px;
+                padding-top: 10px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+

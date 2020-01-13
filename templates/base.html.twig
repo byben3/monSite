@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Développement, conception et production pour le Web, Symfony, React, Html, CSS, JS, SASS, depuis 2019">
+
+    <meta name="twitter:site" content="https://www.benjaminfournie.fr">
+    <meta name="twitter:title" content="Benjamin Fournié, developpeur Web">
+    <meta name="twitter:description" content="Développement, conception et production pour le Web, Symfony, React, Html, CSS, JS, SASS, depuis 2019">
+    <meta name="twitter:creator" content="Benjamin Fournié">
+    <meta property="og:title" content="Webangcy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.benjaminfournie.fr" />
+    <meta property="og:description" content="Développement, conception et production pour le Web, Symfony, React, Html, CSS, JS, SASS, depuis 2019" />
+    <meta property="og:site_name" content="Benjamin Fournié, developpeur Web" />
+
+    <title>{% block title %}Benjamin Fournié, developpeur Web{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('newApp') }}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    {% endblock %}
+</head>
+<body>
+
+
+{% block body %}{% endblock %}
+{% block footer %}
+
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('newApp') }}
+{% endblock %}
+</body>
+</html>
+
